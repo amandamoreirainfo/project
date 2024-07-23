@@ -13,6 +13,24 @@
         {{ session('success') }}
     </div>
 
-    
+    <table>
+        <thead>
+            <tr>
+                <td>Nome</td>
+                <td>Quantidade</td>
+            </tr>   
+        </thead>
+
+        <tbody>
+        @foreach($equipamentos as $equipamento)
+            <tr>
+                <td>{{ $equipamento->name }}</td>
+                <td>{{ $equipamento->amount }}</td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+
+
 </body>
 </html>
