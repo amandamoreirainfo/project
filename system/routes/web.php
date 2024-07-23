@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EquipamentoController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/', [EquipamentoController::class, 'index'])->name('equipamentos.index');
+Route::get('/equipamentos/create', [EquipamentoController::class, 'create'])->name('equipamentos.create');
+Route::post('/equipamentos', [EquipamentoController::class, 'store'])->name('equipamentos.store');
