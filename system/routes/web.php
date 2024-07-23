@@ -23,3 +23,5 @@ Route::get('/', function () {
 Route::get('/', [EquipamentoController::class, 'index'])->name('equipamentos.index');
 Route::get('/equipamentos/create', [EquipamentoController::class, 'create'])->name('equipamentos.create');
 Route::post('/equipamentos', [EquipamentoController::class, 'store'])->name('equipamentos.store');
+Route::get('/equipamentos/{id}/editar', [EquipamentoController::class, 'edit'])->name('equipamentos.edit');
+Route::put('/equipamentos/{id}', [EquipamentoController::class, 'update'])->name('equipamentos.update');
