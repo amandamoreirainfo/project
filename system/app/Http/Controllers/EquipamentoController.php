@@ -104,5 +104,9 @@ class EquipamentoController extends Controller
     public function destroy($id)
     {
         //
-    }
+        $equipamento = Equipamento::findOrFail($id);
+        $equipamento->delete();
+
+        return redirect()->route('equipamentos.index')->with('success', 'Equipamento deletado com sucesso!');
+}
 }
