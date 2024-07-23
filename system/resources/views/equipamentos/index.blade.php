@@ -6,6 +6,13 @@
     <title>Equipamentos</title>
 </head>
 <body>
-    TESTEEEEEEEEEE
+
+    <h2>Equipamentos</h2>
+
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+
+    
 </body>
 </html>
